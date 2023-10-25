@@ -1,0 +1,33 @@
+name: Semantic Release
+
+### PREREQUISITE
+  # .releaserc file
+  # package.json 
+
+on:
+  workflow_call:
+    secrets: 
+      github-token:
+        required: true
+jobs:
+  release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          token: ${{ secrets.github-token }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        working-directory: .
+        run: npm install
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.github-token }}
+        run: npx semantic-release

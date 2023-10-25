@@ -1,0 +1,21 @@
+name: Reusable workflow for Hello World
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+env:
+  HELLO_WORLD: "Saying hi"
+
+jobs:
+  pipeline:
+    name: 'Hello world from ${{ inputs.environment }}'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: | 
+            echo "Hello World is working from ${{ inputs.environment }}" >> $GITHUB_STEP_SUMMARY
+
