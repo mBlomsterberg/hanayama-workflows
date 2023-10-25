@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/mBlomsterberg/hanayama-workflows/compare/v1.0.0...v1.0.1) (2023-10-25)
+
 # 1.0.0 (2023-10-25)
 
 
