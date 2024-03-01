@@ -13,7 +13,7 @@
     Reusable Workflows and Composite Actions used for convention and easy updates across Hanayama repositories in Github.
     <br />
     <br />
-    <a href="https://github.com/mBlosterberg/hanayama-workflows/.github&workflows">Github Workflows</a>
+    <a href="https://github.com/mBlomsterberg/hanayama-workflows/tree/main/.github/workflows">Github Workflows</a>
 
   <br />
 </div>
